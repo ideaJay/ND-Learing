@@ -7,18 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
+    <script type="text/javascript" src="./js/ajax.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
 </head>
 <body>
-    <div class="l-sider">
-        <div class="logo-box">
+    <nav class="l-sider">
+        <header class="logo-box">
             <a href="###" class="logo" title="101" >
                 <img src="" alt="">
             </a>
-        </div>
+        </header>
         <div class="courses-box">
             <div class="courses-title">课程列表</div>
-            <ul class="courses-list">
+            <ul class="courses-list" id="courses-list">
                 <li >
                     <a href="###" class="courses-item">全部课程</a>
                 </li>
@@ -40,12 +41,9 @@
              
             </ul>
         </div>
-       
-
-       
-    </div>
+    </nav>
     <div class="l-content">
-        <div class="l-top">
+        <header class="l-top">
             <div class="user-info">
                 <div class="user-info__item">
                     <span class="icon icon--usr"></span>
@@ -63,9 +61,9 @@
                 </span>
                 <span class="icon icon--pull"></span> -->
             </div>
-        </div>
+        </header>
         <div class="l-main">
-            <div class="l-main__hd">
+            <header class="l-main__hd">
                 <ul class="tab">
                     <li class="tab__item tab--sel">
                         <!-- <a href="###" class="tab__item__txt">我的作品</a> -->
@@ -87,7 +85,7 @@
                         新建作品
                     </button>
                 </div>
-            </div>
+            </header>
             <div class="l-main__bd">
                 <div class="search">
                     <div class="search__main">
@@ -366,10 +364,10 @@
         </div>  
     </div>
     <div class="l-pop--new pop-window" id="l-new-work" >
-        <div class="pop--title">
+        <header class="pop--title">
             <span class="pop--title__txt">新建作品</span>
             <span class="icon icon--close" id="work-close"></span>
-        </div>
+        </header>
         <div class="pop-new__content">
             <form>
                 <table class="content--table">
@@ -438,10 +436,10 @@
         </div>
     </div>
     <div class="l-pop--class pop-window" id="l-new-class">
-        <div class="pop--title">
+        <header class="pop--title">
             <span class="pop--title__txt">班级成员</span>
             <span class="icon icon--close" id="class-close"></span>
-        </div>
+        </header>
         <div class="class--box">
             <div class="select-box">
                 <div class="search--bar">
@@ -489,9 +487,9 @@
             </div>
         </div>
         <div class="clear"></div>
-        <div class="pop--ft">
+        <footer class="pop--ft">
             <button class="btn btn-stu-confirm" id="class-submit">确定</button>
-        </div>
+        </footer>
     </div>
 </body>
 </html>

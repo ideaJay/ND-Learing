@@ -1,4 +1,4 @@
-function ajax(){
+function ajax(options){
 
   var defaultOption = {
     url: false,
@@ -11,7 +11,6 @@ function ajax(){
   },
   key = null,
   xhr = null,
-  options = {},
   param = '';
   
   if (window.XMLHttpRequest)  {
@@ -24,10 +23,10 @@ function ajax(){
 
 
   for(key in defaultOption){
-    options[i] = options[i] || defaultOption[i];
+    options[key] = options[key] || defaultOption[key];
   }
   //参数拼接
-  for(key in data){
+  for(key in options.data){
      if(param === ''){
       param +=  key + '=' + data[key];    
      }else{
@@ -38,7 +37,7 @@ function ajax(){
   if(options.type.toLowerCase() === 'get'){
     url += '?' + param;
   }else if(options.type.toLowerCase() === 'post'){
-    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
+   
   }else{
     throw {
       code : '-100',
@@ -47,6 +46,7 @@ function ajax(){
   }
 
   xhr.open(options.type,options.url,options.async); 
+  xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
   xhr.send(param);
 
   if(options.async === true){
