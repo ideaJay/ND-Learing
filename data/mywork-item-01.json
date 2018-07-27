@@ -1,63 +1,63 @@
-{
+mywork_list({
     "total": 10,
     "datas": [{
         "name": "静夜思01",
         "authName": "李冉,涂佳佳,李婷婷,王小明",
         "datetime": "2017/08/21 10:52" ,
-        "logo": "../images/works.png"
+        "logo": "images/works.png"
     },
     {
         "name": "静夜思02",
         "authName": "李冉,涂佳佳,李婷婷,王小明",
         "datetime": "2017/08/21 10:52" ,
-        "logo": "../images/works.png"
+        "logo": "images/works.png"
     },
     {
         "name": "静夜思03",
         "authName": "李冉,涂佳佳,李婷婷,王小明",
         "datetime": "2017/08/21 10:52" ,
-        "logo": "../images/works.png"
+        "logo": "images/works.png"
     },
     {
         "name": "静夜思04",
         "authName": "李冉,涂佳佳,李婷婷,王小明",
         "datetime": "2017/08/21 10:52" ,
-        "logo": "../images/works.png"
+        "logo": "images/works.png"
     },
     {
         "name": "静夜思05",
         "authName": "李冉,涂佳佳,李婷婷,王小明",
         "datetime": "2017/08/21 10:52" ,
-        "logo": "../images/works.png"
+        "logo": "images/works.png"
     },
     {
         "name": "静夜思06",
         "authName": "李冉,涂佳佳,李婷婷,王小明",
         "datetime": "2017/08/21 10:52" ,
-        "logo": "../images/works.png"
+        "logo": "images/works.png"
     },
     {
         "name": "静夜思07",
         "authName": "李冉,涂佳佳,李婷婷,王小明",
         "datetime": "2017/08/21 10:52" ,
-        "logo": "../images/works.png"
+        "logo": "images/works.png"
     },
     {
         "name": "静夜思08",
         "authName": "李冉,涂佳佳,李婷婷,王小明",
         "datetime": "2017/08/21 10:52" ,
-        "logo": "../images/works.png"
+        "logo": "images/works.png"
     },
     {
         "name": "静夜思09",
         "authName": "李冉,涂佳佳,李婷婷,王小明",
         "datetime": "2017/08/21 10:52" ,
-        "logo": "../images/works.png"
+        "logo": "images/works.png"
     },
     {
         "name": "静夜思10",
         "authName": "李冉,涂佳佳,李婷婷,王小明",
         "datetime": "2017/08/21 10:52" ,
-        "logo": "../images/works.png"
+        "logo": "images/works.png"
     }]
-}
+})

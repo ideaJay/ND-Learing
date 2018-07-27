@@ -7,21 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <script type="text/javascript" src="./js/array.js"></script>  
+    <script type="text/javascript" src="./js/element.js"></script>  
+    <script type="text/javascript" src="./js/main.js"></script>  
     <script type="text/javascript" src="./js/ajax.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/pager.js"></script>  
+    <script type="text/javascript" src="./js/form.js"></script>  
+   
+
 </head>
 <body>
     <nav class="l-sider">
         <header class="logo-box">
             <a href="###" class="logo" title="101" >
-                <img src="" alt="">
             </a>
         </header>
         <div class="courses-box">
             <div class="courses-title">课程列表</div>
             <ul class="courses-list" id="courses-list">
-                <li >
-                    <a href="###" class="courses-item">全部课程</a>
+                <li class='ui-sel'>
+                    <a href="###" class="courses-item ">全部课程</a>
                 </li>
                 <li >
                     <a href="###" class="courses-item">课程一:静夜思</a>
@@ -29,7 +35,7 @@
                 <li >
                     <a href="###" class="courses-item">课程二:红军长征</a>
                 </li>
-                <li class="ui-sel">
+                <li >
                     <a href="###" class="courses-item">课程三:活字印刷术</a>
                 </li>
                 <li>
@@ -42,7 +48,7 @@
             </ul>
         </div>
     </nav>
-    <div class="l-content">
+    <div class="l-content" id="l-content">
         <header class="l-top">
             <div class="user-info">
                 <div class="user-info__item">
@@ -64,7 +70,7 @@
         </header>
         <div class="l-main">
             <header class="l-main__hd">
-                <ul class="tab">
+                <ul class="tab" id="tab">
                     <li class="tab__item tab--sel">
                         <!-- <a href="###" class="tab__item__txt">我的作品</a> -->
                         我的作品
@@ -86,271 +92,23 @@
                     </button>
                 </div>
             </header>
-            <div class="l-main__bd">
+            <div class="l-main__bd" id="l-main__bd">
                 <div class="search">
                     <div class="search__main">
-                        <input type="text" placeholder="搜索资源...">
+                        <input type="text" placeholder="搜索资源..." id="search__value">
                         <i class="icon icon--search"></i>
                     </div>
-                    <button class="search__btn">搜索</button>
+                    <button class="btn search__btn" id='search__btn'>搜索</button>
                 </div>
-                <div class="car-main">
-                    <ul class="car-list">
-                        <li >
-                            <div class="car-item">
-                                <div class="car-box">
-                                        <div class="car-item__bd">
-                                            <img src="./images/works.png" alt="" class="car-item__pic">
-                                            <div class="car-item__info">
-                                                <i class="icon icon--name"></i>
-                                                <div class="card-item__name">李冉,涂佳佳,李婷婷...</div>
-                                                <div class="car-item__date">2017/08/21 10:52</div>
-                                            </div>
-                                        </div>
-                                        <div class="car-item__btns">
-                                            <button class="btn car-btn">
-                                                <i class="icon icon--edit"></i>
-                                                <span class="btn__text">编辑</span>
-                                            </button>
-                                            <button class="btn car-btn">
-                                                <i class="icon icon--play"></i>
-                                                <span class="btn__text">播放</span>
-                                            </button>
-                                            <button class="btn car-btn">
-                                                <i class="icon icon--delete"></i>
-                                                <span class="btn__text">删除</span>
-                                            </button>
-                                        </div>
-                                </div>
-                                <div class="car-item__ft">
-                                        <span class="car-item__ft__txt">郑和下西洋</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li >
-                            <div class="car-item">
-                                <div class="car-box">
-                                        <div class="car-item__bd">
-                                            <img src="./images/works.png" alt="" class="car-item__pic">
-                                            <div class="car-item__info">
-                                                <i class="icon icon--name"></i>
-                                                <div class="card-item__name">李冉,涂佳佳,李婷婷...</div>
-                                                <div class="car-item__date">2017/08/21 10:52</div>
-                                            </div>
-                                        </div>
-                                        <div class="car-item__btns">
-                                            <button class="btn car-btn">
-                                                <i class="icon icon--edit"></i>
-                                                <span class="btn__text">编辑</span>
-                                            </button>
-                                            <button class="btn car-btn">
-                                                <i class="icon icon--play"></i>
-                                                <span class="btn__text">播放</span>
-                                            </button>
-                                            <button class="btn car-btn">
-                                                <i class="icon icon--delete"></i>
-                                                <span class="btn__text">删除</span>
-                                            </button>
-                                        </div>
-                                </div>
-                                <div class="car-item__ft">
-                                        <span class="car-item__ft__txt">郑和下西洋</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li >
-                            <div class="car-item">
-                                <div class="car-box">
-                                    <div class="car-item__bd">
-                                        <img src="./images/works.png" alt="" class="car-item__pic">
-                                        <div class="car-item__info">
-                                            <i class="icon icon--name"></i>
-                                            <div class="card-item__name">李冉,涂佳佳,李婷婷...</div>
-                                            <div class="car-item__date">2017/08/21 10:52</div>
-                                        </div>
-                                    </div>
-                                    <div class="car-item__btns">
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--edit"></i>
-                                            <span class="btn__text">编辑</span>
-                                        </button>
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--play"></i>
-                                            <span class="btn__text">播放</span>
-                                        </button>
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--delete"></i>
-                                            <span class="btn__text">删除</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="car-item__ft">
-                                        <span class="car-item__ft__txt">郑和下西洋</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li >
-                            <div class="car-item">
-                                <div class="car-box">
-                                    <div class="car-item__bd">
-                                        <img src="./images/works.png" alt="" class="car-item__pic">
-                                        <div class="car-item__info">
-                                            <i class="icon icon--name"></i>
-                                            <div class="card-item__name">李冉,涂佳佳,李婷婷...</div>
-                                            <div class="car-item__date">2017/08/21 10:52</div>
-                                        </div>
-                                    </div>
-                                    <div class="car-item__btns">
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--edit"></i>
-                                            <span class="btn__text">编辑</span>
-                                        </button>
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--play"></i>
-                                            <span class="btn__text">播放</span>
-                                        </button>
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--delete"></i>
-                                            <span class="btn__text">删除</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="car-item__ft">
-                                        <span class="car-item__ft__txt">郑和下西洋</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li >
-                            <div class="car-item">
-                                <div class="car-box">
-                                        <div class="car-item__bd">
-                                            <img src="./images/works.png" alt="" class="car-item__pic">
-                                            <div class="car-item__info">
-                                                <i class="icon icon--name"></i>
-                                                <div class="card-item__name">李冉,涂佳佳,李婷婷...</div>
-                                                <div class="car-item__date">2017/08/21 10:52</div>
-                                            </div>
-                                        </div>
-                                        <div class="car-item__btns">
-                                            <button class="btn car-btn">
-                                                <i class="icon icon--edit"></i>
-                                                <span class="btn__text">编辑</span>
-                                            </button>
-                                            <button class="btn car-btn">
-                                                <i class="icon icon--play"></i>
-                                                <span class="btn__text">播放</span>
-                                            </button>
-                                            <button class="btn car-btn">
-                                                <i class="icon icon--delete"></i>
-                                                <span class="btn__text">删除</span>
-                                            </button>
-                                        </div>
-                                </div>
-                                <div class="car-item__ft">
-                                        <span class="car-item__ft__txt">郑和下西洋</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li >
-                            <div class="car-item">
-                                <div class="car-box">
-                                    <div class="car-item__bd">
-                                        <img src="./images/works.png" alt="" class="car-item__pic">
-                                        <div class="car-item__info">
-                                            <i class="icon icon--name"></i>
-                                            <div class="card-item__name">李冉,涂佳佳,李婷婷...</div>
-                                            <div class="car-item__date">2017/08/21 10:52</div>
-                                        </div>
-                                    </div>
-                                    <div class="car-item__btns">
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--edit"></i>
-                                            <span class="btn__text">编辑</span>
-                                        </button>
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--play"></i>
-                                            <span class="btn__text">播放</span>
-                                        </button>
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--delete"></i>
-                                            <span class="btn__text">删除</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="car-item__ft">
-                                        <span class="car-item__ft__txt">郑和下西洋</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li >
-                            <div class="car-item">
-                                <div class="car-box">
-                                    <div class="car-item__bd">
-                                        <img src="./images/works.png" alt="" class="car-item__pic">
-                                        <div class="car-item__info">
-                                            <i class="icon icon--name"></i>
-                                            <div class="card-item__name">李冉,涂佳佳,李婷婷...</div>
-                                            <div class="car-item__date">2017/08/21 10:52</div>
-                                        </div>
-                                    </div>
-                                    <div class="car-item__btns">
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--edit"></i>
-                                            <span class="btn__text">编辑</span>
-                                        </button>
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--play"></i>
-                                            <span class="btn__text">播放</span>
-                                        </button>
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--delete"></i>
-                                            <span class="btn__text">删除</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="car-item__ft">
-                                    <span class="car-item__ft__txt">郑和下西洋</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li >
-                            <div class="car-item">
-                                <div class="car-box">
-                                    <div class="car-item__bd">
-                                        <img src="./images/works.png" alt="" class="car-item__pic">
-                                        <div class="car-item__info">
-                                            <i class="icon icon--name"></i>
-                                            <div class="card-item__name">李冉,涂佳佳,李婷婷...</div>
-                                            <div class="car-item__date">2017/08/21 10:52</div>
-                                        </div>
-                                    </div>
-                                    <div class="car-item__btns">
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--edit"></i>
-                                            <span class="btn__text">编辑</span>
-                                        </button>
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--play"></i>
-                                            <span class="btn__text">播放</span>
-                                        </button>
-                                        <button class="btn car-btn">
-                                            <i class="icon icon--delete"></i>
-                                            <span class="btn__text">删除</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="car-item__ft">
-                                    <span class="car-item__ft__txt">郑和下西洋</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="car-main" id="car-main">
+                    
                     <div class="clear"></div>
                 </div>
             </div>
+          
             <div class="l-main-ft">
-                <div class="page">
-                    <a href="###" class="page__item"><</a>
+                <div class="page" id="page">
+                    <!-- <a href="###" class="page__item"><</a>
                     <a href="###" class="page__item sel">1</a>
                     <a href="###" class="page__item">2</a>
                     <a href="###" class="page__item">3</a>
@@ -358,28 +116,31 @@
                     <a href="###" class="page__item">5</a>
                     <a href="###" class="page__item">...</a>
                     <a href="###" class="page__item">100</a>
-                    <a href="###" class="page__item">></a>
+                    <a href="###" class="page__item">></a> -->
                 </div>
             </div>
         </div>  
     </div>
     <div class="l-pop--new pop-window" id="l-new-work" >
-        <header class="pop--title">
-            <span class="pop--title__txt">新建作品</span>
-            <span class="icon icon--close" id="work-close"></span>
-        </header>
-        <div class="pop-new__content">
-            <form>
+        <form id="work--form"> 
+            <header class="pop--title">
+                <span class="pop--title__txt">新建作品</span>
+                <span class="icon icon--close" id="work-close"></span>
+            </header>
+            <div class="pop-new__content">    
                 <table class="content--table">
                     <tbody>
                         <tr>
                             <th>资源名称</th>
-                            <td><input type="text"></td>
+                            <td>
+                                <input type="text" id="res--name" class="content-box" validator="required">
+                            </td>
                         </tr>
+
                         <tr>
                             <th>作者</th>
                             <td>
-                                <div class="auth-box">
+                                <div class="auth-box content-box" validator="box_required" id="auth-box">
                                     <div class="auth__item">
                                         <span class="auth__name">李明</span>
                                         <i class="icon icon--auth--delete"></i>
@@ -418,23 +179,27 @@
                         <tr>
                             <th>配图</th>
                             <td>
-                                <button class="btn btn--upload">点击上传图片</button>
+                                <a href="javascript:void(0)" class="btn btn--upload non-under" id="file-upload">
+                                    <input type="file" class="input--hidden" id="input-file" validator="required">
+                                    <span>点击上传图片</span>
+                                </a>
                             </td>
                         </tr>
                         <tr>
                             <!-- TODO--滚动条未处理 -->
                             <th>简介</th>
-                            <td><textarea>《真实世界-泰会玩》第三站，我们来到清迈，清迈素有泰北玫瑰之称。二因他农山则是这座小城一道亮丽风景线。</textarea></td>
+                            <td><textarea validator="tooLong|required" class="content-box">《真实世界-泰会玩》第三站，我们来到清迈，清迈素有泰北玫瑰之称。二因他农山则是这座小城一道亮丽风景线。</textarea></td>
                         </tr>
                     </tbody>
                 </table>
-            </form>
-        </div>
-        <div class="pop--new__ft">
-            <button class="btn btn--confirm" id="work-submit">确定提交</button>
-            <p class="tip--txt">提交后显示在班级作品区</p>
-        </div>
+            </div>
+            <div class="pop--new__ft">
+                <button  type="button" class="btn btn--confirm" id="work-submit" submit >确定提交</button>
+                <p class="tip--txt">提交后显示在班级作品区</p>
+            </div>
+        </form>
     </div>
+
     <div class="l-pop--class pop-window" id="l-new-class">
         <header class="pop--title">
             <span class="pop--title__txt">班级成员</span>
@@ -446,7 +211,7 @@
                     <input type="text">
                     <i class="icon icon--search"></i>
                 </div>
-                <div class="name-list">
+                <div class="name-list" id="name-list">
                     <ul>
                         <li class="name__item">李明</li>
                         <li class="name__item">张三丰</li>
@@ -464,24 +229,14 @@
             </div>
             <div class="operate-box">
                 <div class="oper--btn--group">
-                        <button class="btn btn--stu-add">添加</button>
-                        <button class="btn btn--stu-delete btn--forbidden">删除</button>
+                        <button class="btn btn--stu-add" id="add-auth">添加</button>
+                        <button class="btn btn--stu-delete btn--forbidden" id="delete-auth">删除</button>
                 </div>
             </div>
             <div class="select-box">
-                <div class="name-list">
-                    <ul>
-                        <li class="name__item">李明</li>
-                        <li class="name__item">张三丰</li>
-                        <li class="name__item sel">吴老二</li>
-                        <li class="name__item">斯琴高娃</li>
-                        <li class="name__item">周杰伦</li>
-                        <li class="name__item">吴克群</li>
-                        <li class="name__item">霍建华</li>
-                        <li class="name__item">涨涨站</li>
-                        <li class="name__item">李连杰</li>
-                        <li class="name__item">王宝强</li>
-
+                <div class="name-list" >
+                    <ul id="sel-name">
+                        
                     </ul>
                 </div>
             </div>
@@ -492,4 +247,46 @@
         </footer>
     </div>
 </body>
+
+<!--car-item-填充模板-->
+<script type="text/html" id="theTemplate">
+    <li >
+        <div class="car-item">
+            <div class="car-box">
+                    <div class="car-item__bd">
+                        <img src="imgsrc" alt="" class="car-item__pic">
+                        <div class="car-item__info">
+                            <i class="icon icon--name"></i>
+                            <div class="card-item__name">authName</div>
+                            <div class="car-item__date">datetime</div>
+                        </div>
+                    </div>
+                    <div class="car-item__btns">
+                        <button class="btn car-btn">
+                            <i class="icon icon--edit"></i>
+                            <span class="btn__text">编辑</span>
+                        </button>
+                        <button class="btn car-btn">
+                            <i class="icon icon--play"></i>
+                            <span class="btn__text">播放</span>
+                        </button>
+                        <button class="btn car-btn">
+                            <i class="icon icon--delete"></i>
+                            <span class="btn__text">删除</span>
+                        </button>
+                    </div>
+            </div>
+            <div class="car-item__ft">
+                    <span class="car-item__ft__txt">workName</span>
+            </div>
+        </div>
+    </li>
+</script>
+
+<script type="text/html" id="authTemplate">
+    <div class="auth__item">
+        <span class="auth__name">authName</span>
+        <i class="icon icon--auth--delete"></i>
+    </div>
+</script>
 </html>
